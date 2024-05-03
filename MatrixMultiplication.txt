@@ -1,0 +1,11 @@
+rows = input('Enter the number of rows in the matrices: ');
+cols = input('Enter the number of columns in the matrices: ');
+
+matrix1 = randi([0, 9], rows, cols);
+matrix2 = randi([0, 9], rows, cols);
+
+tic;
+result = matrix1 * matrix2;
+duration = toc;
+
+disp(['Time taken for matrix multiplication: ', num2str(duration * 1000), ' milliseconds']);
