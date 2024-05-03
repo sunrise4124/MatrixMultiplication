@@ -1,0 +1,14 @@
+> rows <- as.integer(readline("Enter the number of rows in the matrices: "))
+Enter the number of rows in the matrices: 1000
+> cols <- as.integer(readline("Enter the number of columns in the matrices: "))
+Enter the number of columns in the matrices: 1000
+> set.seed(123)
+> matrix1 <- matrix(sample(0:9, rows*cols, replace=TRUE), nrow=rows, ncol=cols)
+> matrix2 <- matrix(sample(0:9, rows*cols, replace=TRUE), nrow=rows, ncol=cols)
+> start_time <- Sys.time()
+> result <- matrix1 %*% matrix2
+> end_time <- Sys.time()
+> duration <- as.numeric(difftime(end_time, start_time, units="secs")) * 1000
+> cat("Time taken for matrix multiplication:", sprintf("%.2f", duration), "milliseconds\n")
+Time taken for matrix multiplication: 655.95 milliseconds
+> 
